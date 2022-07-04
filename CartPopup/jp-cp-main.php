@@ -6,7 +6,7 @@
  * Description:       Ventana modal de carrito para woocommerce que se dispara en forma de PopUp cuando se añade al carrito.
  * Version:           1.10.3
  * Requires at least: 5.2
- * Requires PHP:      7.8
+ * Requires PHP:      7.3
  * Author:            Jose Pinto
  * Author URI:        http://www.webmasteryagency.com
  * License:           GPL v3 or later
