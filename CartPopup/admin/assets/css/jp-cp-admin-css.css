@@ -1,0 +1,232 @@
+/* Fonts */
+@font-face {
+  font-family: 'jp-cart-popup-premium';
+  src:  url('../../../assets/css/fonts/jp-cart-popup-premium.eot?vj5qsb');
+  src:  url('../../../assets/css/fonts/jp-cart-popup-premium.eot?vj5qsb#iefix') format('embedded-opentype'),
+    url('../../../assets/css/fonts/jp-cart-popup-premium.ttf?vj5qsb') format('truetype'),
+    url('../../../assets/css/fonts/jp-cart-popup-premium.woff?vj5qsb') format('woff'),
+    url('../../../assets/css/fonts/jp-cart-popup-premium.svg?vj5qsb#jp-cart-popup-premium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="jp-cp-icon-"], [class*=" jp-cp-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'jp-cart-popup-premium' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.jp-cp-icon-close:before {
+  content: "\e906";
+}
+.jp-cp-icon-basket5:before {
+  content: "\e900";
+}
+.jp-cp-icon-basket4:before {
+  content: "\e901";
+}
+.jp-cp-icon-basket6:before {
+  content: "\e902";
+}
+.jp-cp-icon-basket1:before {
+  content: "\e903";
+}
+.jp-cp-icon-basket2:before {
+  content: "\e904";
+}
+.jp-cp-icon-basket3:before {
+  content: "\e905";
+}
+.jp-cp-icon-spinner:before {
+  content: "\e97b";
+}
+.jp-cp-icon-cross:before {
+  content: "\ea0d";
+}
+.jp-cp-icon-check:before {
+  content: "\ea10";
+}
+
+.jp-cp-form h2{
+    background-color: #5e6871;;
+    padding: 11px;
+    color: white;
+}
+
+
+.jp-cp-form label{
+    font-style: italic;
+    margin-left: 10px;
+}
+
+/*sidebar*/
+.jp-main{
+    background-color: #ffffff;
+    padding: 0 10px;
+    max-width: 1000px;
+    flex-grow: 1;
+}
+.jp-container {
+    margin-top: 12px;
+    display: flex;
+}
+.jp-sidebar{
+    margin-left: 40px;
+    background-color: #fff;
+    display: table;
+    padding: 10px 15px;
+    max-width: 315px;
+    min-width: 315px;
+    position:  relative;
+}
+.jp-op-plugin-icon {
+    display:  table;
+    float:  left;
+}
+
+.jp-op-plugin-icon span.dashicons {
+    font-size: 36px;
+    display:  table;
+    color: #5e6871;
+}
+
+span.jp-op-plugin-about {
+    display:  block;
+    margin-top: 4px;
+}
+
+.jp-op-plugin-details a {
+    padding-right: 5px;
+}
+
+li.jp-op-plugin {
+    padding: 14px 0;
+    display:  flex;
+    align-items: center;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.jp-op-plugin-details {
+    margin-left: 10px;
+}
+.jp-op-plugin-head{
+    font-size: 17px;
+    display: block;
+}
+.jp-op-head{
+    display: block;
+    font-size: 16px;
+    border-bottom: 1px solid #e4e4e4;
+    padding-bottom:  7px;
+    text-transform:  uppercase;
+    font-weight:  600;
+    text-align:  left;
+}
+ul.jp-op-list li:first-child{
+    padding-top: 0;
+}
+
+a.jp-sidebar-toggle {
+    cursor: pointer;
+    text-decoration: underline;
+    position:  absolute;
+    right: 10px;
+    top: 10px;
+}
+.jp-sidebar-show .jp-other-plugins{
+    display: none;
+}
+.jp-sidebar-show a.jp-sidebar-toggle {
+    padding:  10px;
+    position:  relative;
+    top: 0;
+    right:  0;
+}
+
+.jp-sidebar.jp-sidebar-show {
+    min-width: 50px;
+    margin-left: 10px;
+}
+
+/* End sidebar */
+
+/*** Tabs ***/
+
+.settings-tab{
+    display: none;
+}
+.settings-tab-active{
+    display: block;
+}
+
+
+
+.jp-tabs{
+    border-bottom: 1px solid #ccc;
+}
+.jp-tabs ul{
+    display: inline-block;
+    margin: 0;
+}
+.jp-tabs li{
+    display: inline-block;
+    padding: 10px;
+    margin-left: 3px;
+    background-color: #4C4C4C;
+    color: white;
+    font-weight: 600;
+    font-size: 17px;
+    margin-bottom: 0;
+    cursor: pointer
+}
+
+li.tab-1{
+    margin-left: 0;
+}
+.jp-tabs .active-tab{
+    background-color: #2d84d4;
+}
+/**          ***/
+
+.jp-remove-media{
+    color: #fff!important;
+    background-color: #c9302c!important;
+    border-color: #ac2925!important;
+    margin-left: 10px!important;
+}
+
+.jp-media-name{
+    line-height: 28px;
+    margin-left: 10px;
+}
+
+.jp-prbtn{
+    padding: 6px 8px;
+    border: 1px solid #2e6da4;
+    border-radius: 5%;
+    color: white!important;
+    background-color: #337ab7!important;
+    cursor: pointer;
+}
+
+select#jp-cp-ad-bk-ict{
+    font-family: "jp-cart-popup-premium"!important;
+    font-size: 15px;
+}
+
+.jp-cp-form table.form-table{
+    margin: 0 10px;
+}
+
+.jp-cp-form .settings-tab{
+    background-color: #fff;
+}

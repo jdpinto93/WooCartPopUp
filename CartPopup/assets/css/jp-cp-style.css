@@ -1,0 +1,594 @@
+/** Fonts **/
+
+@font-face {
+    font-family: 'jp-cart-popup-premium';
+    src:  url('fonts/jp-cart-popup-premium.eot?vj5qsb');
+    src:  url('fonts/jp-cart-popup-premium.eot?vj5qsb#iefix') format('embedded-opentype'),
+      url('fonts/jp-cart-popup-premium.ttf?vj5qsb') format('truetype'),
+      url('fonts/jp-cart-popup-premium.woff?vj5qsb') format('woff'),
+      url('fonts/jp-cart-popup-premium.svg?vj5qsb#jp-cart-popup-premium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  [class^="jp-cp-icon-"], [class*=" jp-cp-icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'jp-cart-popup-premium' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .jp-cp-icon-close:before {
+    content: "\e906";
+  }
+  .jp-cp-icon-basket5:before {
+    content: "\e900";
+  }
+  .jp-cp-icon-basket4:before {
+    content: "\e901";
+  }
+  .jp-cp-icon-basket6:before {
+    content: "\e902";
+  }
+  .jp-cp-icon-basket1:before {
+    content: "\e903";
+  }
+  .jp-cp-icon-basket2:before {
+    content: "\e904";
+  }
+  .jp-cp-icon-basket3:before {
+    content: "\e905";
+  }
+  .jp-cp-icon-spinner:before {
+    content: "\e97b";
+  }
+  .jp-cp-icon-cross:before {
+    content: "\ea0d";
+  }
+  .jp-cp-icon-check:before {
+    content: "\ea10";
+  }
+  
+  
+  .jp-cp-icon-spinner{
+      animation: jp-cp-spin 575ms infinite linear;
+      display: inline-block;
+  }
+  
+  .jp-cp-added, .jp-cp-adding {
+      margin-left: 5px;
+  }
+  
+  
+  .jp-cp-preloader{
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      z-index: 2;
+      animation: jp-cp-spin 575ms infinite linear;
+      font-size: 45px;
+  }
+  
+  
+  @keyframes jp-cp-spin {
+       from {
+          transform:rotate(0deg);
+      }
+      to {
+          transform:rotate(360deg);
+      }
+  }
+  
+  @-ms-keyframes jp-cp-spin {
+      from { -ms-transform: rotate(0deg); }
+      to { -ms-transform: rotate(360deg); }
+  }
+  @-moz-keyframes jp-cp-spin {
+      from { -moz-transform: rotate(0deg); }
+      to { -moz-transform: rotate(360deg); }
+  }
+  @-webkit-keyframes jp-cp-spin {
+      from { -webkit-transform: rotate(0deg); }
+      to { -webkit-transform: rotate(360deg); }
+  }
+  
+  
+  .xcp-rel-head,
+  .jp-cp-hdtxt,
+  a.xcp-btn {
+      text-transform: uppercase
+  }
+  .jp-cp-opac {
+      z-index: 99998;
+      background-color: black;
+      opacity: 0.6;
+      position: fixed;
+      display: none;
+  }
+  .jp-cp-opac,.jp-cp-modal , .jp-cp-cont-opac{
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+  }
+  
+  .jp-cp-modal {
+      position: fixed;
+      text-align: center;
+      z-index: 99998;
+      overflow: hidden;
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(0.7);
+  }
+  
+  .jp-cp-active{
+      transition: visibility 0.4s ease-out, opacity 0.4s ease-out, transform 0.4s ease-out;
+      visibility: visible;
+      opacity: 1;
+      transform: scale(1);
+  }
+  
+  .jp-cp-cont-opac{
+      z-index: 1;
+      background-color: white;
+      opacity: 0.5;
+      position: absolute;
+  }
+  
+  .jp-cp-modal:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+      margin-right: -0.25em;
+  }
+  
+  .jp-cp-container {
+      display: inline-block;
+      max-width: 650px;
+      border: #a0a0a0 solid 1px;
+      background: #fff;
+      position: relative;
+      vertical-align: middle;
+      width: 90%;
+      text-align: left;
+      box-shadow: 0 0 10px rgba(0,0,0,.4);
+      border-radius: 5px;
+      padding-bottom: 15px;
+  }
+  
+  .jp-cp-container-scroll{
+      max-height: 80vh;
+  }
+  
+  
+  span.jp-cp-close {
+      font-size: 29px;
+      position: absolute;
+      right: -13px;
+      top: -11px;
+      background-color: #fff;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 2;
+  }
+  
+  .jp-cp-atcn{
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      left: 0;
+      right: 0;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      display: none;
+      text-align: left;
+      color: #3C763D;
+      background-color: #DFF0D8
+  }
+  .jp-cp-atcn .jp-cp-icon-check{
+      margin-right: 5px;
+  }
+  .jp-cp-atcn.jp-cp-atcn-active{
+      padding: 11px 15px;
+      display: none;
+  }
+  
+  .jp-cp-btns {
+      margin: 20px auto 0;
+      clear: both;
+      text-align: center
+  }
+  a.xcp-btn {
+      width: 30%;
+      text-align: center;
+      cursor: pointer;
+      padding: 8px 12px;
+      display: table;
+      margin: 0 4px;
+      max-width: 200px;
+  }
+  .xcp-icon-spinner2 {
+      display: inline-block
+  }
+  .jp-cp-atc-icon {
+      margin-left: 5px
+  }
+  .jp-cp-qtybox {
+      vertical-align: middle;
+      font-size: 20px;
+      cursor: pointer;
+      margin-top: 10px
+  }
+  td.jp-cp-ptitle a {
+      font-size: 17px;
+      display: block
+  }
+  .jp-cp-variations dl.variation {
+      margin-bottom: 5px
+  }
+  td.jp-cp-pimg {
+      width: 20%
+  }
+  .xcp-one-qty,
+  td.jp-cp-pprice,
+  td.jp-cp-ptotal {
+      font-size: 17px
+  }
+  td.jp-cp-pqty {
+      min-width: 120px
+  }
+  .jp-cp-pdetails td.jp-cp-remove {
+      text-align: center;
+      font-size: 20px
+  }
+  table.jp-cp-cart td,
+  table.jp-cp-cart th {
+      vertical-align: middle;
+      text-align: center
+  }
+  table.jp-cp-cart th {
+      padding: 10px 5px;
+      font-size: 15px;
+      font-weight: 400
+  }
+  table.jp-cp-cart td.jp-cp-ptitle {
+      padding-left: 15px
+  }
+  table.jp-cp-cart td {
+      padding: 20px 0
+  }
+  td.jp-cp-remove .jp-cp-remove-pd {
+      font-size: 20px;
+      color: #ea0a0a;
+      cursor: pointer;
+  }
+  .xcp-outspin {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      font-size: 45px
+  }
+  
+  .jp-cp-outer {
+      display: none
+  }
+  .jp-cp-variations {
+      font-size: 13px;
+      display: table
+  }
+  .jp-cp-variations .variation {
+      overflow: auto;
+      margin-top: 5px
+  }
+  .jp-cp-variations .variation dt {
+      margin: 0 3px 0 0;
+      float: left
+  }
+  .jp-cp-variations .variation dd {
+      margin: 0 7px 0 0;
+      float: left
+  }
+  .jp-cp-cart-total {
+      display: table;
+      margin-left: auto;
+      margin-right: 5px;
+  }
+  .xcp-totxt{
+      font-size: 16px;
+      text-transform: uppercase;
+  }
+  
+  .xcp-ctotal .amount {
+      font-size: 22px
+  }
+  .jp-cp-basket {
+      display: table;
+      padding: 10px;
+      box-shadow: 2px 2px 2px;
+      position: fixed;
+      z-index: 999997;
+      bottom: 20px;
+      right: 20px;
+      border-radius: 10px;
+      cursor: pointer
+  }
+  .xcp-bk-count {
+      border-radius: 50%;
+      left: -15px;
+      position: absolute;
+      top: -15px;
+      width: 28px;
+      height: 28px;
+      line-height: 28px;
+      text-align: center;
+      overflow: hidden;
+      font-size: 13px
+  }
+  .jp-cp-empty {
+      display: table;
+      margin: 20px auto
+  }
+  .xcp-empty-txt {
+      font-size: 20px;
+      display: inline-block;
+      vertical-align: top;
+      line-height: 44px;
+      margin-left: 5px
+  }
+  .xcp-rel-head,
+  .jp-cp-hdtxt {
+      font-size: 17px
+  }
+  .jp-cp-hdtxt {
+      padding: 10px 15px;
+      width: 100%;
+      margin-bottom: 10px
+  }
+  .jp-cp-rel-cont {
+      overflow: auto
+  }
+  .xcp-rel-head {
+      display: block;
+      text-align: center;
+      padding: 7px 0;
+      margin: 15px auto
+  }
+  .xcp-rel-sing img {
+      width: 100%;
+      height: auto
+  }
+  ul.jp-cp-rel-prods {
+      list-style-type: none;
+      display: table;
+      padding: 0 15px;
+      overflow: auto;
+      min-width: 600px
+  }
+  li.jp-cp-rel-sing {
+      max-width: 150px;
+      min-width: 50px
+  }
+  .mCSB_container {
+      margin-right: 0!important
+  }
+  .mCSB_scrollTools {
+      top: 40px!important;
+      bottom: 40px!important;
+      width: 14px!important
+  }
+  li.jp-cp-rel-sing span.onsale {
+      display: none
+  }
+  table.jp-cp-cart tr:nth-child(1) {
+      border-top: 0
+  }
+  table.jp-cp-cart {
+      margin-top: 5px;
+      margin-bottom: 15px;
+      width: 100%
+  }
+  .jp-cp-rel-sing h3 {
+      margin-top: 3px;
+      margin-bottom: 3px;
+      line-height: 16px
+  }
+  .jp-cp-empct {
+      margin: 0 10px;
+      cursor: pointer;
+      font-size: 16px;
+  }
+  .jp-cp-empct .jp-cp-icon-close{
+      font-size: 15px;
+      margin-right: 3px;
+  }
+  .xcp-undo {
+      text-decoration: underline;
+      font-weight: 700;
+      cursor: pointer
+  }
+  .jp-cp-rel-sing .attachment-shop_catalog {
+      width: auto;
+      height: auto
+  }
+  @media only screen and (max-width: 600px) {
+      th.xcp-rhead,
+      td.jp-cp-remove {
+          display: none;
+      }
+      a.xcp-btn {
+          width: 80%;
+          margin: 10px auto 0;
+          max-width: 100%;
+      }
+      .jp-cp-modal .jp-cp-cart-btns{
+          display: block;
+      }
+  
+  }
+  @media only screen and (max-width: 750px) {
+      li.jp-cp-rel-sing {
+          min-width: auto
+      }
+      .jp-cp-cart-total,
+      table.jp-cp-cart td,
+      td.jp-cp-ptitle a {
+          font-size: 14px!important
+      }
+      table.jp-cp-cart .jp-cp-content {
+          overflow: auto
+      }
+      .jp-cp-pprice,
+      th.xcp-phead {
+          display: none
+      }
+  }
+  span.xcp-minus {
+      border-right-width: 1px;
+      border-right-style: solid
+  }
+  span.xcp-plus {
+      border-left-width: 1px;
+      border-left-style: solid
+  }
+  span.xcp-minus,
+  span.xcp-plus {
+      display: inline-block;
+      text-align: center;
+      cursor: pointer;
+      float: left;
+      width: 21px
+  }
+  input[type=number].jp-cp-qty {
+      border: 0!important;
+      text-align: center;
+      display: inline-block;
+      max-width: 30px;
+      float: left;
+      height: 100%;
+      line-height: 100%;
+      padding: 0
+  }
+  input.jp-cp-qty::-webkit-inner-spin-button,
+  input.jp-cp-qty::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0
+  }
+  .jp-cp-qtybox {
+      border-width: 1px;
+      border-style: solid;
+      position: relative;
+      display: inline-block;
+      font-weight: 700;
+      max-width: 90px;
+      height: 37px;
+      line-height: 35px
+  }
+  .jp-cp-table-bottom{
+      display: flex;
+      align-items: center;
+      padding: 10px;
+  }
+  .jp-cp-rel-price,.jp-cp-rel-title{
+      display: block;
+  }
+  
+  .jp-cp-sc-cont{
+      cursor: pointer;
+  }
+  .jp-cp-sc-icon{
+      margin-right: 3px;
+  }
+  .jp-cp-empty-cart-notice{
+      display: block;
+      text-align: center;
+      font-size: 21px;
+  }
+  a.jp-cp-sn-btn{
+      margin: 5px auto;
+      display: table;
+  }
+  
+  .jp-cp-notice-box{
+    left: 0;
+    right: 0;
+    bottom: 50px;
+    position: fixed;
+    z-index: 100000;
+  }
+  .jp-cp-notice-box > div{
+      display: table;
+      margin: 0 auto;
+      background-color: #333;
+      padding: 10px 20px;
+      color: white;
+      font-weight: 500;
+      font-size: 15px;
+  }
+  .jp-cp-notice ul.jpcommerce-error a.button{
+      display: none;
+  }
+  .jp-cp-notice ul.jpcommerce-error{
+     margin: 0;
+  }
+  .jp-cp-undo{
+      text-decoration: underline;
+      float: right;
+      font-weight: 600;
+      cursor: pointer;
+  }
+  .jp-cp-rel-title {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+  }
+  .jp-cp-content{
+      padding: 0 15px;
+  }
+  body.jp-cp-popup-active{
+      overflow-y: hidden;
+  }
+  .jp-cp-rel-slider{
+      overflow: auto;
+  }
+  
+  .jp-cp-cart-btns {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .jp-cp-cart-table-cont {
+      overflow-x: auto;
+  }
+  
+  .jp-cp-variations .variation:last-of-type {
+      display: none;
+  }
+  
+  .jp-cp-variations .variation:first-of-type {
+      display: block;
+  }
+  .jp-cp-yith-bundled-items span {
+      font-size: 13px;
+      color: #777;
+      margin-left: 10px;
+  }
+  tr.jp-cp-is-child td {
+      padding: 0;
+  }
+  
+  tr.jp-cp-is-child td {
+      padding: 0;
+  }
